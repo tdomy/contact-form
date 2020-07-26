@@ -1,0 +1,17 @@
+{
+	"name": "contact-form",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.extend.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/var/www/html",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+    "editorconfig.editorconfig",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "shutdownAction": "stopCompose"
+}
