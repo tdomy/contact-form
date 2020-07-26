@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-finish
+  <p>{{ __('Thank you for your cooperation.') }}</p>
 @endsection

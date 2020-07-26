@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ReCaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ContactRequest extends FormRequest
@@ -19,14 +20,16 @@ class ContactRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
+     * @param ReCaptcha $recaptcha
      * @return array
      */
-    public function rules()
+    public function rules(ReCaptcha $recaptcha)
     {
         return [
             'name'      => ['required', 'max:20'],
             'email'     => ['required', 'email:rfc'],
             'message'   => ['required', 'max:1024'],
+            'token'     => ['required', $recaptcha],
         ];
     }
 }

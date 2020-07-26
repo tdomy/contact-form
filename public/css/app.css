@@ -1,0 +1,22 @@
+body {
+  max-width: 768px;
+  min-width: 240px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bolder;
+}
+
+.mb-1 {
+  margin-bottom: 0.5em;
+}
+
+.alert {
+  color: #ff0000;
+}
+
+.header-menu {
+  text-align: right;
+}

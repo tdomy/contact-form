@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', 'ContactController@showForm')->name('form');
-Route::post('/', 'ContactController@confirm');
-Route::get('/confirm', 'ContactController@showConfirm')->name('confirm');
-Route::post('/confirm', 'ContactController@send');
-Route::get('/finish', 'ContactController@showFinish')->name('finish');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+    Route::get('/', 'ContactController@showForm')->name('form');
+    Route::post('/', 'ContactController@confirm');
+    Route::get('/confirm', 'ContactController@showConfirm')->name('confirm');
+    Route::post('/confirm', 'ContactController@send');
+    Route::get('/finish', 'ContactController@showFinish')->name('finish');
+});

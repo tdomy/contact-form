@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use App\Http\Requests\ContactRequest;
+use App\Notifications\Contacted;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -42,6 +44,8 @@ class ContactController extends Controller
         }
 
         $form_data = $session->pull(self::FORM_DATA_KEY);
+        $contact = new Contact($form_data);
+        $contact->notify(new Contacted());
 
         return redirect()->route('finish');
     }

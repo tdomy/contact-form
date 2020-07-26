@@ -1,0 +1,12 @@
+{
+  "Name": "名前",
+  "Email Address": "メールアドレス",
+  "Message": "メッセージ",
+  "Confirm": "確認する",
+  "Send": "送信する",
+  "Back": "戻る",
+  "Your Name": "あなたの名前",
+  "Your Email Address": "あなたのメールアドレス",
+  "Thank you for your cooperation.": "お問い合わせありがとうございました。",
+  "ReCaptcha error has occurred.": "ReCaptchaエラーが発生しました。"
+}
